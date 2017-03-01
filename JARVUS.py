@@ -1,34 +1,25 @@
-#program start
-
-#add modules
 import webbrowser
 
-running = True
-while running:
-    print('\nWelcome to: \n J  A  R  V  U  S\nPlease log in')
-    #login
+while epassword != 13: # breaks out of the loop when the password is right
+    print('Welcome to:\nJ  A  R  V  U  S\nPlease log in: ')
     eusername = input('Please enter your username:')
     if eusername == 'Justin':
         epassword = input('Please enter your password:')
-        if epassword == '13':
-            print('\nHello '+(eusername))
-            eusername = ()
-            epassword = ()
-            login = True
-            while login:
-                user = input('\nEnter Comand: ')
-                #comand locations
-                if user == 'hi':
-                    print('\nhi')
-                    continue
-                if user == 'bye':
-                    print('\nbye')
-                    login = False
-                    running = False
-                if user == 'logout':
-                    print('\nloging out')
-                    break
-                if user == 'chrome':
-                    csearch = input('Search: ')
-                    webbrowser.open_new_tab((csearch))
-                    
+
+print('Hello,', eusername)
+
+while True:
+    user = input('Enter Command: ')
+    if user == 'hi':
+        print('hi')
+    elif user == 'bye':
+        print('bye')
+        break
+    elif user == 'logout':
+        print('logging out')
+        break
+    elif user == 'chrome':
+        csearch = input('Search on google: ')
+        webbrowser.open_new_tab('https://www.google.com/search?q=' + csearch)
+
+print('Jarvis has closed and you have been logged out.')
