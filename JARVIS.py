@@ -21,8 +21,18 @@ while True:
     elif user == 'logout':
         print('logging out')
         break
-    elif user == 'chrome':
-        csearch = input('Search on google: ')
-        webbrowser.open_new_tab('https://www.google.com/search?q=' + csearch)
+    elif user == 'internet':
+        user = input('Website or google search? [w/g]')
+        if user == 'w':
+            user = input('Enter website address:')
+            if user.startswith('http://') or user.startswith('https://'):
+                webbrowser.open(user)
+            else:
+                webbrowser.open('http://' + user)
+        elif user == 'g':
+            csearch = input('Search on google: ')
+            webbrowser.open('https://www.google.com/search?q=' + csearch)
+        else:
+            print('Enter a w or g.\nType internet to try again.)
 
 print('Jarvis has closed and you have been logged out.')
