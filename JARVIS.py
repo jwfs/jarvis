@@ -1,6 +1,7 @@
 import webbrowser
 
 epassword = None
+help = 'All JARVIS commands:\n\nhi\nbye\nlogout\ninternet\nhelp'
 
 print('Welcome to:\nJ  A  R  V  U  S\nPlease log in: ')
 
@@ -10,10 +11,14 @@ while epassword != '13': # breaks out of the loop when the password is right
         epassword = input('Please enter your password:')
 
 print('Hello,', eusername)
+print()
+print(help)
 
 while True:
     user = input('Enter Command: ')
-    if user == 'hi':
+    if user == 'help':
+        print(help)
+    elif user == 'hi':
         print('hi')
     elif user == 'bye':
         print('bye')
