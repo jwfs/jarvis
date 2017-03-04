@@ -2,7 +2,7 @@ import webbrowser
 
 epassword = None
 
-print('Welcome to:\nJ  A  R  V  U  S\nPlease log in: ')
+print('Welcome to:\nJ  A  R  V  I  S\nPlease log in: ')
 
 while epassword != '13': # breaks out of the loop when the password is right
     eusername = input('Please enter your username:')
